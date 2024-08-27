@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +16,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "22.0.0",
-    "@types/react": "18.3.3",
+    "@types/node": "22.5.0",
+    "@types/react": "18.3.4",
     "typescript": "5.5.4"
   }
 }
