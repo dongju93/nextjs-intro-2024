@@ -1,5 +1,7 @@
 import MovieVideos from "../../../../components/movie-videos";
 import MovieInfo from "../../../../components/movie-info";
+import SkeletonUI from "../../../../components/skeleton";
+
 import { Suspense } from "react";
 
 export const metadata = {
@@ -16,7 +18,7 @@ export default async function MovieDetails({
             <Suspense fallback={<h1>loading movie info</h1>}>
                 <MovieInfo id={id} />
             </Suspense>
-            <Suspense fallback={<h1>loading movie video</h1>}>
+            <Suspense fallback={<SkeletonUI />}>
                 <MovieVideos id={id} />
             </Suspense>
         </div>
