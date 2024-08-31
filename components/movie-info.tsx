@@ -1,4 +1,4 @@
-import { api_url } from "../app/(home)/page";
+import { api_url } from "../components/urls";
 
 const getMovie = async (id: string) => {
     const response = await fetch(`${api_url}/${id}`);

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Navigation from "../components/navigation";
-import "./globals.css";
 
 // 브라우저의 탭에 표시되는 제목과 페이지 설명
 export const metadata: Metadata = {
