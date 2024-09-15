@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "../styles/navigation.module.css";
 
 export default function Navigation() {
     // 사용자가 현재 머무는 URL 경로를 가져옴
     const path = usePathname();
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
                 <li>
                     {/* path 활용 */}
