@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Us",
-    description: "Dummy page",
+  title: "About Us",
+  description: "Dummy page",
 };
 
 export default function AboutUsLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return <div>{children} &copy; Next JS</div>;
+  return <div>{children} &copy; Next JS</div>;
 }

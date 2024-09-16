@@ -5,20 +5,20 @@ import styles from "../styles/movie.module.css";
 import { useRouter } from "next/navigation";
 
 interface MovieProps {
-    title: string;
-    id: number;
-    poster_path: string;
+  title: string;
+  id: number;
+  poster_path: string;
 }
 
 export default function Movie({ title, id, poster_path }: MovieProps) {
-    const router = useRouter();
-    const onClick = () => {
-        router.push(`/movie/${id}`);
-    };
-    return (
-        <div className={styles.movie}>
-            <img src={poster_path} alt={title} onClick={onClick} />
-            <Link href={`/movie/${id}`}>{title}</Link>
-        </div>
-    );
+  const router = useRouter();
+  const onClick = () => {
+    router.push(`/movie/${id}`);
+  };
+  return (
+    <div className={styles.movie}>
+      <img src={poster_path} alt={title} onClick={onClick} />
+      <Link href={`/movie/${id}`}>{title}</Link>
+    </div>
+  );
 }
