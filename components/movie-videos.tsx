@@ -1,4 +1,5 @@
 import { api_url } from "../components/urls";
+import styles from "../styles/movie-videos.module.css";
 
 const getVideo = async (id: string) => {
   // await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -9,6 +10,14 @@ const getVideo = async (id: string) => {
 
 export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideo(id);
-  // return <h6>{JSON.stringify(videos)}</h6>;
-  return <h6>{JSON.stringify(videos)}</h6>;
+  return (
+    <div className={styles.container}>
+      {videos.map((videos) => (
+        <iframe
+          key={videos.id}
+          src={`https://youtube.com/embed/${videos.key}`}
+        />
+      ))}
+    </div>
+  );
 }
