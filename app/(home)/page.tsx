@@ -1,11 +1,6 @@
-import Link from "next/link";
 import { api_url } from "../../components/urls";
 import Movie from "../../components/movie";
 import styles from "../../styles/home.module.css";
-
-export const metadata = {
-  title: "Home",
-};
 
 async function getMovies() {
   // await new Promise((resolve) => setTimeout(resolve, 1000));
